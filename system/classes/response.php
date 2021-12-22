@@ -18,6 +18,7 @@
                 }
             } catch (Exception $ex) {
                 $response->status_code = 500;
+                $response->body        = $ex->getMessage();
             }
 
             return $response;
